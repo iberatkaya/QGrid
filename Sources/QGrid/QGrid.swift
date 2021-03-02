@@ -94,6 +94,8 @@ public struct QGrid<Data, Content>: View
     return columnsInLandscape
     #elseif os(macOS)
     return columnsInLandscape
+    #elseif os(watchOS)
+    return columnsInLandscape
     #else
     return UIDevice.current.orientation.isLandscape ? columnsInLandscape : columns
     #endif
